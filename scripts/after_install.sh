@@ -9,5 +9,4 @@ runuser -l ubuntu -c 'cd /home/ubuntu/nodejs && npm install --unsafe-perm'
 #runuser -l ubuntu -c 'cd /home/ubuntu/nodejs && npm run build'
 sleep 10
 echo "***starting nodejs-api-prod application ***" >> /tmp/nodejs-api-prod_deploy_logs
-runuser -l ubuntu -c 'cd /home/ubuntu/nodejs &&  npm start server/server.js ' >> /tmp/nodejs-api-prod_deploy_logs
-
+runuser -l ubuntu -c 'cd /home/ubuntu/nodejs &&  npm start  ' >> /tmp/nodejs-api-prod_deploy_logs
