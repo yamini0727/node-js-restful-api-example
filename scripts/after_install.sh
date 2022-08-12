@@ -10,4 +10,3 @@ runuser -l ubuntu -c 'cd /home/ubuntu/nodejs && npm install'
 sleep 10
 echo "***starting nodejs0-backend-admin-api-prod application ***" >> /tmp/nodejs-api-prod_deploy_logs
 runuser -l ubuntu -c 'cd /home/ubuntu/nodejs && sudo npm start ' >> /tmp/nodejs-api-prod_deploy_logs
-fi
