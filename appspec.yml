@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+    - source: /
+      destination: /home/ec2-user/eb-backend
+hooks:
+  BeforeInstall:
+    - location: scripts/beforeinstall.sh
+      runas: root
+  
+  AfterInstall:
+    - location: scripts/afterinstall.sh
+      runas: root
