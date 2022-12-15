@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
     - source: /
-      destination: /home/ec2-user/eb-backend
+      destination: /opt/elasticbeanstalk/hooks/appdeploy/pre
 hooks:
   BeforeInstall:
     - location: scripts/beforeinstall.sh
