@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-chown -R ec2-user:ec2-user /home/ec2-user/eb-backend/
+chown -R ec2-user:ec2-user /opt/elasticbeanstalk/hooks/appdeploy/pre
 
 echo  "***Installing npm package ***" >> /tmp/eb-backend-api-prod_deploy_logs
 echo >> /tmp/eb-backend-api-prod_deploys_logs
@@ -9,8 +9,8 @@ runuser -l ec2-user -c 'cd /home/ec2-user/eb-backend && npm install --unsafe-per
 runuser -l ec2-user -c 'cd /home/ec2-user/eb-backend && npm run build'
 runuser -l ec2-user -c 'cd /home/ec2-user/eb-backend && npm start'
 then
-echo "BUILD SUCCESSFUL" >> /tmp/getty-backend-api-prod_deploy_logs
-echo >> /tmp/getty-backend-api-prod_deploy_logs
+echo "BUILD SUCCESSFUL" >> /tmp/eb-backend-api-prod_deploy_logs
+echo >> /tmp/eb-backend-api-prod_deploy_logs
 else
-echo "Node process is restarting" >> /tmp/getty-backend-api-prod_deploy_logs
-echo >> /tmp/getty-backend-api-prod_deploy_logs
+echo "Node process is restarting" >> /tmp/eb-backend-api-prod_deploy_logs
+echo >> /tmp/eb-backend-api-prod_deploy_logs
